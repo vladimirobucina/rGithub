@@ -1,0 +1,10 @@
+Package: rGithub
+Type: Package
+Title: R Package for Github REST API
+Version: 0.1.0
+Authors@R: person("Vladimir", "Obucina", , "vlada_3292@hotmail.com", role = c("aut", "cre"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Small client library to access Github's REST API. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
