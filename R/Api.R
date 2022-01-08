@@ -68,7 +68,7 @@ Api <- R6::R6Class(
     #' @description
     #' Change object printing
     print = function() {
-      cat("<Api> \n token: ", self$token, "\n user (R6 object): ",
+      cat("<Api> \nuser (R6 object): ",
         self$user$login,
         sep = ""
       )

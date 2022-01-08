@@ -1,0 +1,37 @@
+---
+title: "rGithub User Guide"
+author: "Vladimir Obucina <<vlada_3292@hotmail.com>>"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rGithub User Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+rGithub library is mainly used to communicate with [GitHub REST API](https://docs.github.com/en/rest). Technology used to create this library
+is R6 classes. Three main classes are Api, User and Repository. In this vignette
+we'll show you all capabilities and usecases. First we load the library and get
+environment variables for token, username and repo which will be used to
+demonstrate how each class works:
+
+```{r setup}
+library(rGithub)
+auth_token <- Sys.getenv("AUTH_TOKEN")
+username <- Sys.getenv("USERNAME")
+repo <- Sys.getenv("repo")
+```
+One of the options is to create API object, which can be used to get info about
+account and also to get repositories for that account. Let's create one:
+```{r}
+api <- Api$new(token = auth_token, username = username)
+api
+```
+
